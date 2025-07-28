@@ -9,7 +9,7 @@ public class LogoSteps {
 
     @Step
     @DisplayName("Check Red Flag logo")
-    public void checkLogo() {
+    public void checkLogoStep() {
         header.checkLogo();
     }
 }

@@ -14,7 +14,7 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Open the main page and check the logo")
     void checkLogoOnMainPage() {
-        mainPageSteps.openMainPage();
+        mainPageSteps.openMainPageStep();
         header.checkLogo();
     }
 }

@@ -9,7 +9,13 @@ public class MainPageSteps {
 
     @Step
     @DisplayName("Open the main page")
-    public void openMainPage() {
+    public void openMainPageStep() {
         mainPage.openMainPage();
+    }
+
+    @Step
+    @DisplayName("Click Learn how it works button")
+    public void clickLearnHowItWorksStep() {
+        mainPage.clickLearnHowItWorksButton();
     }
 }

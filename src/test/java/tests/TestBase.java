@@ -3,38 +3,44 @@ package tests;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import config.WebDriverConfig;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
+import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
+import java.util.Objects;
 
 import static java.lang.String.format;
 
 public class TestBase {
+    static final String baseURL = "https://www.redflagseals.com/";
+    static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+
     @BeforeAll
     static void setupConfig() {
-        String selenoidHostName = System.getProperty("selenoidHostName", "selenoid.autotests.cloud");
-        String selenoidLogin = System.getProperty("selenoidLogin", "user1");
-        String selenoidPassword = System.getProperty("selenoidPassword", "1234");
-        String environmentLink = System.getProperty("environmentLink", "https://www.redflagseals.com/");
-
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("selenoid:options", Map.<String, Object>of(
-                "enableVNC", true,
-                "enableVideo", true
-        ));
-
-        Configuration.browserSize = System.getProperty("screenResolution", "1920x1080");
-        //Configuration.remote = format("https://%s:%s@%s/wd/hub", selenoidLogin, selenoidPassword, selenoidHostName);
-        Configuration.browser = System.getProperty("browser", "chrome");
-        //Configuration.browserVersion = System.getProperty("browserVersion", "128.0");
-        Configuration.browserCapabilities = capabilities;
-        Configuration.baseUrl = environmentLink;
+        Configuration.baseUrl = baseURL;
+        Configuration.browserSize = config.getScreenResolution();
+        Configuration.browser = config.getBrowser();
+        Configuration.browserVersion = config.getBrowserVersion();
         Configuration.pageLoadStrategy = "eager";
+
+        if (Objects.equals(config.getEnvironment(), "QA_GURU")) {
+            String selenoidHostName = config.getSelenoidHostName();
+            String selenoidLogin = config.getSelenoidLogin();
+            String selenoidPassword = config.getSelenoidPassword();
+            Configuration.remote = format("https://%s:%s@%s/wd/hub", selenoidLogin, selenoidPassword, selenoidHostName);
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("selenoid:options", Map.<String, Object>of(
+                    "enableVNC", true,
+                    "enableVideo", true
+            ));
+            Configuration.browserCapabilities = capabilities;
+        }
     }
 
     @BeforeEach

@@ -19,6 +19,7 @@ public class CartPage {
     private final SelenideElement cartTable = $(".wc-block-cart-items.wp-block-woocommerce-cart-line-items-block");
 
     private final Header header = new Header();
+
     public void openCartPage() {
         open(baseUrl);
         header.clickCart();

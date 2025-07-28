@@ -1,10 +1,33 @@
 package tests;
 
-import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Feature;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import pages.HowItWorksPage;
+import pages.MainPage;
 
-import static com.codeborne.selenide.Selenide.$;
+@Feature("How it works")
+public class HowItWorksTest extends TestBase {
+    private final MainPage mainPage = new MainPage();
+    private final HowItWorksPage howItWorksPage = new HowItWorksPage();
 
-public class HowItWorksTest {
-    private final SelenideElement leftMenuHowItWorksSpanishButton = $("page_item.page-item-4507");
-    private final SelenideElement leftMenuHowLXEGPSWorksSpanishButton = $("page_item page-item-4539");
+    @Test
+    @DisplayName("Open How It Works (Español) page")
+    void openHowItWorksSpanishPage() {
+        mainPage.openMainPage();
+        mainPage.clickLearnHowItWorksButton();
+        howItWorksPage.clickLeftMenuHowItWorksSpanishButton();
+        howItWorksPage.checkHeadline("How It Works (Español )");
+        howItWorksPage.checkVideo();
+    }
+
+    @Test
+    @DisplayName("Open How LXE Works page")
+    void openHowLXEWorksPage() {
+        mainPage.openMainPage();
+        mainPage.clickLearnHowItWorksButton();
+        howItWorksPage.clickLeftMenuHowLXEGPSWorksButton();
+        howItWorksPage.checkHeadline("How LXE Works ");
+        howItWorksPage.checkVideo();
+    }
 }

@@ -9,13 +9,13 @@ public class ShopSteps {
 
     @Step
     @DisplayName("Open Shop page")
-    public void openShopPage() {
+    public void openShopPageStep() {
         shopPage.openShopPage();
     }
 
     @Step
     @DisplayName("Click Select option for LXR")
-    public void clickSelectOptionForLXR() {
+    public void clickSelectOptionForLXRStep() {
         shopPage.clickSelectOptionLXR();
     }
 }

@@ -32,16 +32,10 @@ dependencies {
             "org.junit.platform:junit-platform-launcher:1.13.0-M2",
             'org.slf4j:slf4j-simple:2.0.17',
             'com.github.javafaker:javafaker:1.0.2',
-            'commons-io:commons-io:2.15.0',
-            'com.codeborne:pdf-test:1.5.0',
-            'com.codeborne:xls-test:1.4.3',
-            'com.opencsv:opencsv:5.9',
-            'com.fasterxml.jackson.core:jackson-core:2.19.0',
-            "com.fasterxml.jackson.core:jackson-databind:2.19.0",
             'org.projectlombok:lombok:1.18.30',
             'io.qameta.allure:allure-selenide:2.29.1',
             'org.assertj:assertj-core:3.27.3',
-            "com.github.javafaker:javafaker:1.0.2"
+            "org.aeonbits.owner:owner:1.0.12"
     )
 }
 
@@ -54,10 +48,5 @@ tasks.withType(Test) {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
-    }
-}
-task smoke_test(type: Test) {
-    useJUnitPlatform {
-        includeTags("Smoke")
     }
 }
