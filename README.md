@@ -124,4 +124,4 @@ The project is integrated with Jenkins, where the parametrized tests can be run 
 
 After each run a notification is sent automatically to **Telegram** with a brief summary of the test results including the number of passed and failed tests, run duration, and report link. This functianlity is implemented using the [allure-notifications](https://github.com/qa-guru/allure-notifications) library which also allows sending notifications to Slack, Discord, and other messengers.
 
-<img src="readmemedia/TgNotificationExample.png" alt="Telegram Notification">
+<img src="readmemedia/TGNotificationExample.png" alt="Telegram Notification">
