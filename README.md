@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# Red Flag Marketing Site web site automated tests
+# Red Flag Marketing Site Automated Tests
 
 ## 📜 Summary
 - [Stack](#-stack)
