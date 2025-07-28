@@ -55,6 +55,12 @@
         </a>
         <br>Allure
       </td>
+    <td align="center" width="110">
+        <a href="https://aerokube.com/selenoid/latest/" target="_blank">
+          <img src="readmemedia/selenoidlogo.png" width="48" height="48" alt="Allure" />
+        </a>
+        <br>Selenoid
+      </td>
       <td align="center" width="110">
         <a href="https://www.jenkins.io/" target="_blank">
           <img src="readmemedia/jenkins-original.svg" width="48" height="48" alt="Jenkins" />
