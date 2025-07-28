@@ -57,7 +57,7 @@
       </td>
     <td align="center" width="110">
         <a href="https://aerokube.com/selenoid/latest/" target="_blank">
-          <img src="readmemedia/selenoidlogo.png" width="48" height="48" alt="Allure" />
+          <img src="readmemedia/selenoidlogo.png" width="48" height="48" alt="Selenoid" />
         </a>
         <br>Selenoid
       </td>
