@@ -113,7 +113,7 @@ The project is integrated with Jenkins, where the parametrized tests can be run 
 <img src="readmemedia/AllureReportExample.png" alt="Allure Report">
 
 ### Each test in the report contains:
-- User-friedly readable test steps
+- Test steps
 - Screenshot of the last step
 - Page Source
 - Video of the test run
