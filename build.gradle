@@ -50,3 +50,7 @@ tasks.withType(Test) {
         }
     }
 }
+
+task stmms_test(type: Test) {
+    useJUnitPlatform {}
+}
