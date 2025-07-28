@@ -23,14 +23,11 @@ public interface WebDriverConfig extends Config {
     String environment();
 
     @Key("selenoid.hostName")
-    @DefaultValue("selenoid.autotests.cloud")
     String selenoidHostName();
 
     @Key("selenoid.login")
-    @DefaultValue("user1")
     String selenoidLogin();
 
     @Key("selenoid.password")
-    @DefaultValue("1234")
     String selenoidPassword();
 }
