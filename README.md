@@ -111,7 +111,7 @@ The project is integrated with Jenkins, where the parametrized tests can be run 
 - Page Source
 - Video of the test run
   
-<img src="readmemedia/TestRunVideoExample.gif" alt="Video of the test run">
+<img src="readmemedia/RFMSTestRunVideo.gif" alt="Video of the test run">
 
 ## <img src="readmemedia/Telegram.svg" width="48" height="48" alt="Telegram" /> Notifications
 
