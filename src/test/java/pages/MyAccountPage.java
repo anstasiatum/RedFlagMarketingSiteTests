@@ -23,14 +23,17 @@ public class MyAccountPage {
     }
 
     public void setUsernameOrEmailField(String usernameOrEmail) {
+        usernameOrEmailField.shouldBe(visible);
         usernameOrEmailField.setValue(usernameOrEmail);
     }
 
     public void setPasswordField(String password) {
+        passwordField.shouldBe(visible);
         passwordField.setValue(password);
     }
 
     public void clickLogin() {
+        loginButton.shouldBe(visible);
         loginButton.click();
     }
 

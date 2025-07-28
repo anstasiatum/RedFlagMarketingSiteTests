@@ -26,6 +26,7 @@ public class CartPage {
     }
 
     public void clickRemoveItem() {
+        removeLXRButton.shouldBe(visible);
         removeLXRButton.click();
     }
 
@@ -40,18 +41,22 @@ public class CartPage {
     }
 
     public void checkProductName(String expectedName) {
+        productName.shouldBe(visible);
         productName.shouldHave(text(expectedName));
     }
 
     public void checkProductQuantity(String expectedQuantity) {
+        productQuantity.shouldBe(visible);
         productQuantity.shouldHave(text(expectedQuantity));
     }
 
     public void checkProductCost(String expectedCost) {
+        productCost.shouldBe(visible);
         productCost.shouldHave(text(expectedCost));
     }
 
     public void checkTotalPrice(String expectedTotalPrice) {
+        totalPrice.shouldBe(visible);
         totalPrice.shouldHave(text(expectedTotalPrice));
     }
 }

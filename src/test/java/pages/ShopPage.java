@@ -3,6 +3,7 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 import pages.components.Header;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -18,6 +19,7 @@ public class ShopPage {
     }
 
     public void clickSelectOptionLXR() {
+        selectOptionLXR.shouldBe(visible);
         selectOptionLXR.click();
     }
 }

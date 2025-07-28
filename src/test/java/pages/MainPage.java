@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -14,6 +15,7 @@ public class MainPage {
     }
 
     public void clickLearnHowItWorksButton() {
+        learnHowItWorksButton.shouldBe(visible);
         learnHowItWorksButton.click();
     }
 }

@@ -13,14 +13,17 @@ public class HowItWorksPage {
     private final SelenideElement video = $(".mejs-overlay.mejs-layer.mejs-overlay-play");
 
     public void clickLeftMenuHowItWorksSpanishButton() {
+        leftMenuHowItWorksSpanishButton.shouldBe(visible);
         leftMenuHowItWorksSpanishButton.click();
     }
 
     public void clickLeftMenuHowLXEGPSWorksButton() {
+        leftMenuHowLXEGPSWorksButton.shouldBe(visible);
         leftMenuHowLXEGPSWorksButton.click();
     }
 
     public void checkHeadline(String expectedHeadline) {
+        headline.shouldBe(visible);
         headline.shouldHave(text(expectedHeadline));
     }
 
