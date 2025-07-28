@@ -1,4 +1,4 @@
-<img width="1894" height="809" alt="image" src="https://github.com/user-attachments/assets/e47b5e52-8c37-4643-bcd5-5e70ff631c3b" /><p align="center">
+<p align="center">
   <a href="https://redflagseals.com/" target="_blank">
     <img src="readmemedia/redflaglogo.webp" width="200" alt="Red Flag Logo">
   </a>
