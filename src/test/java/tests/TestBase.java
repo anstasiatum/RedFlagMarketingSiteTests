@@ -24,15 +24,15 @@ public class TestBase {
     @BeforeAll
     static void setupConfig() {
         Configuration.baseUrl = baseURL;
-        Configuration.browserSize = config.getScreenResolution();
-        Configuration.browser = config.getBrowser();
-        Configuration.browserVersion = config.getBrowserVersion();
+        Configuration.browserSize = config.screenResolution();
+        Configuration.browser = config.browser();
+        Configuration.browserVersion = config.browserVersion();
         Configuration.pageLoadStrategy = "eager";
 
-        if (Objects.equals(config.getEnvironment(), "QA_GURU")) {
-            String selenoidHostName = config.getSelenoidHostName();
-            String selenoidLogin = config.getSelenoidLogin();
-            String selenoidPassword = config.getSelenoidPassword();
+        if (Objects.equals(config.environment(), "QA_GURU")) {
+            String selenoidHostName = config.selenoidHostName();
+            String selenoidLogin = config.selenoidLogin();
+            String selenoidPassword = config.selenoidPassword();
             Configuration.remote = format("https://%s:%s@%s/wd/hub", selenoidLogin, selenoidPassword, selenoidHostName);
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(

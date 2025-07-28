@@ -3,36 +3,34 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
-@Config.Sources({
-        "system:properties",
+@Config.Sources(
+        {"system:properties",
         "classpath:${env}.properties"
 })
 
 public interface WebDriverConfig extends Config {
 
     @Key("browser.name")
-    @DefaultValue("chrome")
-    String getBrowser();
+    String browser();
 
     @Key("browser.version")
-    String getBrowserVersion();
+    String browserVersion();
 
     @Key("browser.screenResolution")
-    @DefaultValue("1920x1080")
-    String getScreenResolution();
+    String screenResolution();
 
     @Key("environment")
-    String getEnvironment();
+    String environment();
 
     @Key("selenoid.hostName")
     @DefaultValue("selenoid.autotests.cloud")
-    String getSelenoidHostName();
+    String selenoidHostName();
 
     @Key("selenoid.login")
     @DefaultValue("user1")
-    String getSelenoidLogin();
+    String selenoidLogin();
 
     @Key("selenoid.password")
     @DefaultValue("1234")
-    String getSelenoidPassword();
+    String selenoidPassword();
 }
