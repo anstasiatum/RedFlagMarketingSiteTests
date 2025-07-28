@@ -52,7 +52,9 @@ public class TestBase {
     void addAttachments() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
-        Attach.browserConsoleLogs();
+        if (config.browser().equals("chrome")) {
+            Attach.browserConsoleLogs();
+        }
         Attach.addVideo();
         Selenide.closeWebDriver();
     }
