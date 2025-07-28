@@ -15,7 +15,6 @@ public interface WebDriverConfig extends Config {
     String getBrowser();
 
     @Key("browser.version")
-    @DefaultValue("138.0")
     String getBrowserVersion();
 
     @Key("browser.screenResolution")
