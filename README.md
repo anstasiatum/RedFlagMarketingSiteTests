@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# Red Flag Marketing Site web site automated tests
+# Red Flag Marketing Site Automated Tests
 
 ## 📜 Summary
 - [Stack](#-stack)
@@ -55,6 +55,12 @@
         </a>
         <br>Allure
       </td>
+    <td align="center" width="110">
+        <a href="https://aerokube.com/selenoid/latest/" target="_blank">
+          <img src="readmemedia/selenoidlogo.png" width="48" height="48" alt="Selenoid" />
+        </a>
+        <br>Selenoid
+      </td>
       <td align="center" width="110">
         <a href="https://www.jenkins.io/" target="_blank">
           <img src="readmemedia/jenkins-original.svg" width="48" height="48" alt="Jenkins" />
@@ -78,8 +84,9 @@
 
 ## ✅ Automated test cases
 1. Checking the Red Flag logo
-2. Unsuccessful Login
-3. Verifying "How it works" page
+2. Login
+3. Add seals to cart
+4. Verifying "How it works" page
 
 ## ▶️ Build
 
