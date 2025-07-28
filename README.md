@@ -78,8 +78,9 @@
 
 ## ✅ Automated test cases
 1. Checking the Red Flag logo
-2. Unsuccessful Login
-3. Verifying "How it works" page
+2. Login
+3. Add seals to cart
+4. Verifying "How it works" page
 
 ## ▶️ Build
 
