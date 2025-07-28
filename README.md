@@ -4,7 +4,7 @@
   </a>
 </p>
 
-# Kupsilla web site automated tests
+# Red Flag Marketing Site web site automated tests
 
 ## 📜 Summary
 - [Stack](#-stack)
