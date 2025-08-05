@@ -107,7 +107,7 @@ The project is integrated with Jenkins, where the parametrized tests can be run 
 <img src="readmemedia/RFMSJenkins.png" alt="Jenkins Main Page">
 
 
-## <img src="readmemedia/Allure.svg" width="48" height="48" alt="Allure" /> [Allure report](https://jenkins.autotests.cloud/job/KupsillaWebSite/6/allure/)
+## <img src="readmemedia/Allure.svg" width="48" height="48" alt="Allure" /> [Allure report](https://jenkins.autotests.cloud/job/RedFlagMarketingSiteTests/23/allure/)
 
 ### Allure report page
 <img src="readmemedia/AllureReportExample.png" alt="Allure Report">
