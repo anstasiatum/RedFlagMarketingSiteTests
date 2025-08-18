@@ -23,12 +23,6 @@ public class LXRPageSteps {
     }
 
     @Step
-    @DisplayName("Check confirmation message")
-    public void checkErrorMessageStep(String expectedMessage) {
-        lxrPage.checkErrorMessage(expectedMessage);
-    }
-
-    @Step
     @DisplayName("Click View cart")
     public void clickViewCartStep() {
         lxrPage.clickViewCart();
