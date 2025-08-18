@@ -93,7 +93,7 @@
 The build is parametrized. The tests can be run in different browsers, browser versions, resolutions as well as in different environments. These parameters can be set either in the `.properties` files, or via the VM options as shown in the script below. 
 
 ```bash
-stmms_test
+test
 -Denv=${environment}
 -Dbrowser.name=${Browser}
 -Dbrowser.version=${BrowserVersion}
