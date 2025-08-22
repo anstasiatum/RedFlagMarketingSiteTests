@@ -18,4 +18,10 @@ public class MainPageSteps {
     public void clickLearnHowItWorksStep() {
         mainPage.clickLearnHowItWorksButton();
     }
+
+    @Step
+    @DisplayName("Check the Red Flag logo")
+    public void checkLogo() {
+        mainPage.checkLogo();
+    }
 }

@@ -6,11 +6,11 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import steps.CartSteps;
 import steps.LXRPageSteps;
-import steps.ShopSteps;
+import steps.ShopPageSteps;
 
 @Feature("Add products to cart")
 public class AddSealsToCartTest extends TestBase {
-    private final ShopSteps shopSteps = new ShopSteps();
+    private final ShopPageSteps shopPageSteps = new ShopPageSteps();
     private final LXRPageSteps lxrPageSteps = new LXRPageSteps();
     private final CartSteps cartSteps = new CartSteps();
 
@@ -26,8 +26,8 @@ public class AddSealsToCartTest extends TestBase {
         String quantity = "200";
         String expectedPrice = "$1,100.00";
 
-        shopSteps.openShopPageStep();
-        shopSteps.clickSelectOptionForLXRStep();
+        shopPageSteps.openShopPageStep();
+        shopPageSteps.clickSelectOptionForLXRStep();
         lxrPageSteps.addSealsToCartAndCheckMessageStep(quantity, expectedPrice);
         lxrPageSteps.checkConfirmationMessageStep("“LXR” has been added to your cart.");
         lxrPageSteps.clickViewCartStep();
